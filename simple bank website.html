@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div id="wraper">
+        <h1>LOGIN ACOUNT  </h1>
+        <div class="login">
+            <h2>Login</h2>
+            <input type="text" id="usre-id" placeholder="Enter you Phone Number">
+            <input type="password" id="you-password" placeholder="Enter you password">
+            <button id="button-aira">login</button>
+        </div>
+    </div>
+
+    <!-- transition -->
+
+    <div id="wrp">
+        <div class="header">
+            <h1>current you bank acount</h1>
+            <div class="section-aira">
+                <div class="section">
+                    <h2>Deposit</h2>
+                    <h2>$ <span id="diposit-amount">00</span></h2>
+                </div>
+                <div class="section">
+                    <h2>widthrow</h2>
+                    <h2>$ <span id="wirdhdroow">00</span></h2>
+                </div>
+                <div class="section">
+                    <h2>Total Blance</h2>
+                    <h2>$<span id="currentBlance">120</span></h2>
+                </div>
+            </div>
+
+            <!-- deposit & widthrow section -->
+
+            <div class="buttom-section">
+                <div class="section1">
+                    <h2>Deposit</h2>
+                    <input type="number" id="depositAmount" placeholder="">
+                    <button id="addDeposit">click</button>
+                </div>
+                <div class="section1">
+                    <h2>Cash out</h2>
+                    <input type="number" id="addwidthdrow" placeholder="">
+                    <button id="widthdrowAmount" >click</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const loginbtn = document.getElementById("button-aira");
+        loginbtn.addEventListener("click", function(){
+            const wrapper = document.getElementById("wraper");
+            wrapper.style.display = "none";
+            const transfrom = document.getElementById("wrp");
+            transfrom.style.display ="block"
+        })
+            
+            const depositbtn = document.getElementById("addDeposit");
+            depositbtn.addEventListener("click", function(){
+                const desposit = document.getElementById("depositAmount").value;
+                const depositnumber = parseFloat(desposit);
+
+                const dipositAmount = document.getElementById("diposit-amount").innerText;
+                const currentNumber = parseFloat(dipositAmount);
+                const totalNumber = depositnumber + currentNumber;
+                document.getElementById("diposit-amount").innerText = totalNumber;
+
+                const blance = document.getElementById("currentBlance").innerText;
+                const blanceNumber = parseFloat(blance);
+                const totalblance = depositnumber + blanceNumber;
+                document.getElementById("currentBlance").innerText = totalblance;
+                
+                // updatespan("currentBlance", depositnumber);
+                // updatespan("diposit-amount", depositnumber);
+                
+
+                document.getElementById("depositAmount").value="";
+            })
+
+            const withdrowbtn = document.getElementById("widthdrowAmount");
+            withdrowbtn.addEventListener("click", function(){
+                const withdrawNumber=document.getElementById("addwidthdrow").value;
+                const withdrawBlance = parseFloat(withdrawNumber);
+
+                const BlanceWithdrow = document.getElementById("wirdhdroow").innerText;
+                const wirdhdrowwNumber = parseFloat(BlanceWithdrow);
+                const totalwirdhdrow = wirdhdrowwNumber + withdrawBlance;
+
+                document.getElementById("wirdhdroow").innerText = totalwirdhdrow;
+
+                const blancee = document.getElementById("currentBlance").innerText;
+                
+                
+                const blanceNumberr = parseFloat(blancee);
+                const totalblancec =   blanceNumberr - withdrawBlance
+
+                document.getElementById("currentBlance").innerText = totalblancec;
+
+                document.getElementById("addwidthdrow").value="";
+            })
+
+            
+            
+            // function updatespan(id, depositnumber){
+            //     const currentBlance = document.getElementById(id).innerText;
+            //     const blanceNumber = parseFloat(id);
+            //     const totalblance = depositnumber + addblancee ;
+            //     document.getElementById(id).innerText = totalblance;
+                
+            // }
+
+    </script>
+
+</body>
+</html>

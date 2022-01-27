@@ -1,0 +1,102 @@
+    /* login section */
+.wraper {
+    margin: auto;
+    width: 980px;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.login {
+    width: 600px;
+    margin: auto;
+    background: #f3eded;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+    border: 1px solid #fff;
+    padding: 40px;
+}
+
+#usre-id {
+    display: block;
+    padding: 10px;
+    width: 500px;
+}
+
+#you-password {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    width: 500px;
+}
+
+button#button-aira {
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+#transaction-aira{
+    display: none;
+}
+
+.blance{
+    display: flex;
+    box-sizing: border-box;
+    margin: 20px 100px;
+}
+.amount{
+    background-color: beige;
+    margin: auto;
+    width: 15%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    height: 100px;
+    text-align: center;
+}
+.diposit1{
+    background: burlywood;
+    margin-left: 25%;
+    height: 150px;
+    width: 250px;
+}
+.withdrow2{
+    background: cadetblue;
+    margin-right: 25%;
+    height: 150px;
+    width: 250px;
+}
+
+    /* second section */
+#wrp {
+    margin: auto;
+    width: 980px;
+    display: none;
+}
+.header {
+    text-align: center;
+}
+.section-aira {
+    
+}
+.section {
+    width: 250px;
+    border: 1px solid #2d1212;
+    margin: 20px;
+    height: 150px;
+    background: #f3eded;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 10px;
+    float: left;
+}
+.section1{
+    width: 400px;
+border: 1px solid #2d1212;
+margin: 20px;
+height: 150px;
+background: #f3eded;
+box-shadow: 5px 5px 10px grey;
+border-radius: 10px;
+float: left;
+}
